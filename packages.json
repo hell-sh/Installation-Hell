@@ -1,0 +1,167 @@
+[
+	{
+		"name": "Pre-Installation",
+		"packages": [
+			{
+				"id": "aptdate",
+				"name": "Update Package List",
+				"lines": ["apt-get update"],
+				"default": true
+			},
+			{
+				"id": "aptgrade",
+				"name": "Upgrade Installed Packages",
+				"lines": ["apt-get -y upgrade"]
+			},
+			{
+				"id": "autoremove",
+				"name": "Remove Uneeded Packages",
+				"lines": ["apt-get -y autoremove"],
+				"default": true
+			},
+			{
+				"id": "precmd",
+				"name": "Custom Pre-Installation Command",
+				"input": "Execute",
+				"lines": ["$PRECMD | bash"]
+			}
+		]
+	},
+	{
+		"name": "Configuration",
+		"packages": [
+			{
+				"id": "hostname",
+				"name": "Change Hostname",
+				"input": "Change Hostname to",
+				"lines": [
+					"echo \"$HOSTNAME\" > /etc/hostname",
+					"echo \"127.0.0.1 $HOSTNAME\" >> /etc/hosts",
+					"echo \"::1 $HOSTNAME\" >> /etc/hosts",
+					"hostname $HOSTNAME"
+				]
+			},
+			{
+				"id": "rootpw",
+				"name": "Change Root Password",
+				"input": "Change Root Password to",
+				"lines": [
+					"passwd root <<EOF",
+					"$ROOTPW",
+					"$ROOTPW",
+					"EOF"
+				]
+			}
+		]
+	},
+	{
+		"name": "Programming Languages",
+		"packages": [
+			{
+				"id": "php7-0",
+				"name": "PHP 7.0 CLI",
+				"lines": ["apt-get -y install php7.0-cli"]
+			},
+			{
+				"id": "php5",
+				"name": "PHP 5 CLI",
+				"lines": ["apt-get -y install php5-cli"]
+			},
+			{
+				"id": "php5-mysqlnd",
+				"name": "PHP 5 MySQL Native Driver (mysqlnd)",
+				"lines": ["apt-get -y install php5-mysqlnd"]
+			}
+		]
+	},
+	{
+		"name": "Web Server",
+		"packages": [
+			{
+				"id": "apache2",
+				"name": "Apache 2",
+				"lines": ["apt-get -y install apache2"],
+				"children": [
+					{
+						"id": "apache2-headers",
+						"name": "Headers Module",
+						"lines": [
+							"a2enmod headers",
+							"service apache2 restart"
+						]
+					},
+					{
+						"id": "apache2-php7-0",
+						"name": "PHP 7.0",
+						"lines": ["apt-get -y install libapache2-mod-php7.0"]
+					},
+					{
+						"id": "apache2-php5",
+						"name": "PHP 5",
+						"lines": ["apt-get -y install libapache2-mod-php5"]
+					}
+				]
+			},
+			{
+				"id": "nginx",
+				"name": "NGINX",
+				"lines": ["apt-get -y install nginx"]
+			},
+			{
+				"id": "www-zip",
+				"name": "/var/www from zip",
+				"input": "Download /var/www zip from",
+				"lines": [
+					"apt-get -y install unzip",
+					"rm -r /var/www",
+					"wget $WWW_ZIP --output-document=/var/www.zip",
+					"unzip /var/www.zip -d /var/www",
+					"rm /var/www.zip"
+				]
+			},
+			{
+				"id": "html-zip",
+				"name": "/var/www/html from zip",
+				"input": "Download /var/www/html zip from",
+				"lines": [
+					"apt-get -y install unzip",
+					"rm -r /var/www/html",
+					"wget $HTML_ZIP --output-document=/var/www/html.zip",
+					"unzip /var/www/html.zip -d /var/www/html",
+					"rm /var/www/html.zip"
+				]
+			}
+		]
+	},
+	{
+		"name": "Utilities",
+		"packages": [
+			{
+				"id": "htop",
+				"name": "htop",
+				"lines": ["apt-get -y install htop"]
+			},
+			{
+				"id": "nload",
+				"name": "nload",
+				"lines": ["apt-get -y install nload"]
+			},
+			{
+				"id": "un_zip",
+				"name": "zip + unzip",
+				"lines": ["apt-get -y install zip unzip"]
+			}
+		]
+	},
+	{
+		"name": "Post-Installation",
+		"packages": [
+			{
+				"id": "postcmd",
+				"name": "Custom Post-Installation Command",
+				"input": "Execute",
+				"lines": ["$POSTCMD | bash"]
+			}
+		]
+	}
+]
