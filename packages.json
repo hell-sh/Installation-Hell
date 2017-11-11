@@ -157,7 +157,7 @@
 				"lines": ["apt-get -y install zip unzip"]
 			},
 			{
-				"id": "npm"
+				"id": "npm",
 				"name": "NPM",
 				"lines": ["apt-get -y install npm"]
 			}
