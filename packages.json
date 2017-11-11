@@ -60,14 +60,12 @@
 			{
 				"id": "php7-0",
 				"name": "PHP 7.0 CLI",
-				"lines": ["apt-get -y install php7.0-cli"],
-				"children": [
-					{
-						"id": "php7-0-fpm",
-						"name": "PHP 7.0 FPM",
-						"lines": ["apt-get -y install php7.0-fpm"]
-					}
-				]
+				"lines": ["apt-get -y install php7.0-cli"]
+			},
+			{
+				"id": "php7-0-fpm",
+				"name": "PHP 7.0 FPM",
+				"lines": ["apt-get -y install php7.0-fpm"]
 			},
 			{
 				"id": "php5",
