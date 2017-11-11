@@ -71,7 +71,12 @@
 				"id": "php5-mysqlnd",
 				"name": "PHP 5 MySQL Native Driver (mysqlnd)",
 				"lines": ["apt-get -y install php5-mysqlnd"]
-			}
+			},
+			{
+				"id": "nodejs",
+				"name": "NodeJS",
+				"lines": ["apt-get -y install nodejs"]
+			}		
 		]
 	},
 	{
@@ -150,6 +155,11 @@
 				"id": "un_zip",
 				"name": "zip + unzip",
 				"lines": ["apt-get -y install zip unzip"]
+			},
+			{
+				"id": "npm"
+				"name": "NPM",
+				"lines": ["apt-get -y install npm"]
 			}
 		]
 	},
