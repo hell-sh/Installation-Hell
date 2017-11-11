@@ -1,0 +1,12 @@
+[
+	{
+		"name": "New Server",
+		"desc": "Makes servers with old/bad templates new and usable.",
+		"packages": "aptdate,aptgrade,autoremove,git,htop,nload,un_zip"
+	},
+	{
+		"name": "PHP Webserver",
+		"desc": "Installs Apache 2 and PHP 7.0.",
+		"packages": "apache2,apache2-headers,apache2-php7-0,aptdate,php7-0"
+	}
+]
