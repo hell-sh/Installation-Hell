@@ -149,6 +149,11 @@
 		"name": "Utilities",
 		"packages": [
 			{
+				"id": "git",
+				"name": "Git",
+				"lines": ["apt-get -y install git"]
+			},
+			{
 				"id": "htop",
 				"name": "htop",
 				"lines": ["apt-get -y install htop"]
