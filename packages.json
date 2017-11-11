@@ -75,8 +75,15 @@
 			{
 				"id": "nodejs",
 				"name": "NodeJS",
-				"lines": ["apt-get -y install nodejs"]
-			}		
+				"lines": ["apt-get -y install nodejs"],
+				"children": [
+					{
+						"id": "npm",
+						"name": "NPM",
+						"lines": ["apt-get -y install npm"]
+					}
+				]
+			}
 		]
 	},
 	{
@@ -155,11 +162,6 @@
 				"id": "un_zip",
 				"name": "zip + unzip",
 				"lines": ["apt-get -y install zip unzip"]
-			},
-			{
-				"id": "npm",
-				"name": "NPM",
-				"lines": ["apt-get -y install npm"]
 			}
 		]
 	},
