@@ -60,17 +60,26 @@
 			{
 				"id": "php7-0",
 				"name": "PHP 7.0 CLI",
-				"lines": ["apt-get -y install php7.0-cli"]
+				"lines": ["apt-get -y install php7.0-cli"],
+				"children": [
+					{
+						"id": "php7-0-fpm",
+						"name": "PHP 7.0 FPM",
+						"lines": ["apt-get -y install php7.0-fpm"]
+					}
+				]
 			},
 			{
 				"id": "php5",
 				"name": "PHP 5 CLI",
-				"lines": ["apt-get -y install php5-cli"]
-			},
-			{
-				"id": "php5-mysqlnd",
-				"name": "PHP 5 MySQL Native Driver (mysqlnd)",
-				"lines": ["apt-get -y install php5-mysqlnd"]
+				"lines": ["apt-get -y install php5-cli"],
+				"children": [
+					{
+						"id": "php5-mysqlnd",
+						"name": "PHP 5 MySQL Native Driver (mysqlnd)",
+						"lines": ["apt-get -y install php5-mysqlnd"]
+					}
+				]
 			},
 			{
 				"id": "nodejs",
