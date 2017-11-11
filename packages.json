@@ -157,6 +157,11 @@
 				"lines": ["apt-get -y install zip unzip"]
 			},
 			{
+				"id": "git",
+				"name": "Git",
+				"lines": ["apt-get -y install git"]
+			},
+			{
 				"id": "npm",
 				"name": "NPM",
 				"lines": ["apt-get -y install npm"]
