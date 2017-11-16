@@ -80,6 +80,16 @@
 				]
 			},
 			{
+				"id": "jre",
+				"name": "Java Runtime Environment (JRE)",
+				"lines": ["apt-get -y install default-jre"]
+			},
+			{
+				"id": "jdk",
+				"name": "Java Development Kit (JDK) (Includes JRE)",
+				"lines": ["apt-get -y install default-jdk"]
+			},
+			{
 				"id": "nodejs",
 				"name": "NodeJS",
 				"lines": ["apt-get -y install nodejs"],
