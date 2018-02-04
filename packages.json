@@ -55,6 +55,28 @@
 		]
 	},
 	{
+		"name": "Package Managers",
+		"packages": [
+			{
+				"id": "aptitude",
+				"name": "Aptitude",
+				"lines": ["apt-get -y install aptitude"]
+			},
+			{
+				"id": "rpm",
+				"name": "RPM",
+				"lines": ["apt-get -y install rpm"],
+				"children": [
+					{
+						"id": "alien",
+						"name": "Alien",
+						"lines": ["apt-get -y install alien"]
+					}
+				]
+			}
+		]
+	},
+	{
 		"name": "Programming Languages",
 		"packages": [
 			{
@@ -78,6 +100,23 @@
 						"lines": ["apt-get -y install php5-mysqlnd"]
 					}
 				]
+			},
+			{
+				"id": "python",
+				"name": "Python",
+				"lines": ["apt-get -y install python"],
+				"children": [
+					{
+						"id": "pip",
+						"name": "Pip",
+						"lines": ["wget -qO- https://bootstrap.pypa.io/get-pip.py | python"]
+					}
+				]
+			},
+			{
+				"id": "python3",
+				"name": "Python 3",
+				"lines": ["apt-get -y install python 3"]
 			},
 			{
 				"id": "jre",
@@ -184,6 +223,64 @@
 				"id": "un_zip",
 				"name": "zip + unzip",
 				"lines": ["apt-get -y install zip unzip"]
+			},
+			{
+				"id": "magick",
+				"name": "ImageMagick",
+				"lines": [
+					"cd $HOME",
+					"wget https://www.imagemagick.org/download/ImageMagick.tar.gz",
+					"tar -xvzf ImageMagick.tar.gz",
+					"rm ImageMagick.tar.gz",
+					"export MAGICK_HOME=\"$HOME/ImageMagick-7.0.7-22\"",
+					"export PATH=\"$MAGICK_HOME/bin:$PATH\"",
+					"LD_LIBRARY_PATH=\"${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$MAGICK_HOME/lib\"",
+					"export LD_LIBRARY_PATH",
+					"cd ImageMagick-7.0.0-77",
+					"./configure",
+					"make",
+					"make install"
+				]
+			},
+			{
+				"id": "pngquant",
+				"name": "pngquant",
+				"lines": ["apt-get -y install pngquant"]
+			},
+			{
+				"id": "optipng",
+				"name": "OptiPNG",
+				"lines": [
+					"cd $HOME",
+					"wget https://kent.dl.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.7/optipng-0.7.7.tar.gz",
+					"tar -xvzf optipng-0.7.7.tar.gz",
+					"rm optipng-0.7.7.tar.gz",
+					"cd optipng-0.7.7",
+					"./configure",
+					"make",
+					"make install"
+				]
+			},
+			{
+				"id": "jpeginfo",
+				"name": "Jpeginfo",
+				"lines": ["apt-get -y install jpeginfo"]
+			},
+			{
+				"id": "jpegoptim",
+				"name": "Jpegoptim",
+				"lines": ["apt-get -y install jpegoptim"]
+			},
+			{
+				"id": "gifsicle",
+				"name": "Gifsicle",
+				"lines": ["apt-get -y install gifsicle"]
+			},
+			{
+				"id": "scour",
+				"name": "Scour",
+				"requirement": "pip",
+				"lines": ["pip install scour"]
 			}
 		]
 	},
