@@ -167,6 +167,29 @@
 						"id": "apache2-php5",
 						"name": "PHP 5",
 						"lines": ["apt-get -y install libapache2-mod-php5"]
+					},
+					{
+						"id": "apache-http-error-pages",
+						"name": "HTTP-Error-Pages",
+						"lines": [
+							"cd /etc/apache2",
+							"wget https://github.com/netducks/HTTP-Error-Pages/archive/master.tar.gz",
+							"tar -xvzf master.tar.gz",
+							"rm master.tar.gz",
+							"mv HTTP-Error-Pages-master http-error-pages",
+							"echo \"# HTTP-Error-Pages\" >> apache2.conf",
+							"echo \"Alias /http-error-pages /etc/apache2/http-error-pages\" >> apache2.conf",
+							"echo \"ErrorDocument 400 /http-error-pages/400.html\" >> apache2.conf",
+							"echo \"ErrorDocument 401 /http-error-pages/401.html\" >> apache2.conf",
+							"echo \"ErrorDocument 403 /http-error-pages/403.html\" >> apache2.conf",
+							"echo \"ErrorDocument 404 /http-error-pages/404.html\" >> apache2.conf",
+							"echo \"\" >> apache2.conf",
+							"echo \"<Directory /etc/apache2/http-error-pages>\" >> apache2.conf",
+							"echo \"	AllowOverride None\" >> apache2.conf",
+							"echo \"	Require all granted\" >> apache2.conf",
+							"echo \"</Directory>\" >> apache2.conf",
+							"service apache2 reload"
+						]
 					}
 				]
 			},
