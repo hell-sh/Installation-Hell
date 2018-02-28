@@ -185,8 +185,8 @@
 							"echo \"ErrorDocument 404 /http-error-pages/404.html\" >> apache2.conf",
 							"echo \"\" >> apache2.conf",
 							"echo \"<Directory /etc/apache2/http-error-pages>\" >> apache2.conf",
-							"echo \"	AllowOverride None\" >> apache2.conf",
-							"echo \"	Require all granted\" >> apache2.conf",
+							"echo \"AllowOverride None\" >> apache2.conf",
+							"echo \"Require all granted\" >> apache2.conf",
 							"echo \"</Directory>\" >> apache2.conf",
 							"service apache2 reload"
 						]
