@@ -7,6 +7,6 @@
 	{
 		"name": "PHP Webserver",
 		"desc": "Installs Apache 2 and PHP.",
-		"packages": "apache2,apache2-headers,apache2-php,php"
+		"packages": "apache-http-error-pages,apache2,apache2-headers,apache2-php,php"
 	}
 ]
