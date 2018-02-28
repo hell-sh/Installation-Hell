@@ -5,8 +5,7 @@
 			{
 				"id": "aptdate",
 				"name": "Update Package List",
-				"lines": ["apt-get update"],
-				"default": true
+				"lines": ["apt-get update"]
 			},
 			{
 				"id": "aptgrade",
@@ -16,8 +15,7 @@
 			{
 				"id": "autoremove",
 				"name": "Remove Uneeded Packages",
-				"lines": ["apt-get -y autoremove"],
-				"default": true
+				"lines": ["apt-get -y autoremove"]
 			},
 			{
 				"id": "precmd",
@@ -80,24 +78,31 @@
 		"name": "Programming Languages",
 		"packages": [
 			{
-				"id": "php7-0",
-				"name": "PHP 7.0 CLI",
-				"lines": ["apt-get -y install php7.0-cli"]
-			},
-			{
-				"id": "php7-0-fpm",
-				"name": "PHP 7.0 FPM",
-				"lines": ["apt-get -y install php7.0-fpm"]
-			},
-			{
-				"id": "php5",
-				"name": "PHP 5 CLI",
-				"lines": ["apt-get -y install php5-cli"],
+				"id": "php",
+				"name": "PHP",
+				"lines": ["apt-get -y install php"],
 				"children": [
 					{
-						"id": "php5-mysqlnd",
-						"name": "PHP 5 MySQL Native Driver (mysqlnd)",
-						"lines": ["apt-get -y install php5-mysqlnd"]
+						"id": "php-cli",
+						"name": "CLI",
+						"lines": ["apt-get -y install php-cli"]
+					},
+					{
+						"id": "php-fpm",
+						"name": "PHP FPM",
+						"lines": ["apt-get -y install php-fpm"]
+					},
+					{
+						"id": "php-mysql",
+						"name": "PHP MySQL Extension",
+						"lines": ["apt-get -y install php-mysql"],
+						"children": [
+							{
+								"id": "php-mysqlnd",
+								"name": "PHP MySQL Native Driver",
+								"lines": ["apt-get -y install php-mysqlnd"]
+							}
+						]
 					}
 				]
 			},
@@ -116,7 +121,7 @@
 			{
 				"id": "python3",
 				"name": "Python 3",
-				"lines": ["apt-get -y install python 3"]
+				"lines": ["apt-get -y install python3"]
 			},
 			{
 				"id": "jre",
@@ -152,6 +157,14 @@
 				"children": [
 					{
 						"id": "apache2-headers",
+						"name": "SSL Module",
+						"lines": [
+							"a2enmod ssl",
+							"service apache2 restart"
+						]
+					},
+					{
+						"id": "apache2-headers",
 						"name": "Headers Module",
 						"lines": [
 							"a2enmod headers",
@@ -159,14 +172,18 @@
 						]
 					},
 					{
-						"id": "apache2-php7-0",
-						"name": "PHP 7.0",
-						"lines": ["apt-get -y install libapache2-mod-php7.0"]
+						"id": "apache2-headers",
+						"name": "Rewrite Module",
+						"lines": [
+							"a2enmod rewrite",
+							"service apache2 restart"
+						]
 					},
 					{
-						"id": "apache2-php5",
-						"name": "PHP 5",
-						"lines": ["apt-get -y install libapache2-mod-php5"]
+						"id": "apache2-php",
+						"name": "PHP",
+						"requirement": "php",
+						"lines": ["apt-get -y install libapache2-mod-php"]
 					},
 					{
 						"id": "apache-http-error-pages",

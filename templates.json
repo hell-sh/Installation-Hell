@@ -6,7 +6,7 @@
 	},
 	{
 		"name": "PHP Webserver",
-		"desc": "Installs Apache 2 and PHP 7.0.",
-		"packages": "apache2,apache2-headers,apache2-php7-0,aptdate,php7-0"
+		"desc": "Installs Apache 2 and PHP.",
+		"packages": "apache2,apache2-headers,apache2-php,php"
 	}
 ]
