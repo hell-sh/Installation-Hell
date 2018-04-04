@@ -93,6 +93,11 @@
 						"lines": ["apt-get -y install php-fpm"]
 					},
 					{
+						"id": "php-curl",
+						"name": "PHP CURL",
+						"lines": ["apt-get -y install php-curl"]
+					},
+					{
 						"id": "php-mysql",
 						"name": "PHP MySQL Extension",
 						"lines": ["apt-get -y install php-mysql"],
@@ -156,7 +161,7 @@
 				"lines": ["apt-get -y install apache2"],
 				"children": [
 					{
-						"id": "apache2-headers",
+						"id": "apache2-ssl",
 						"name": "SSL Module",
 						"lines": [
 							"a2enmod ssl",
@@ -172,7 +177,7 @@
 						]
 					},
 					{
-						"id": "apache2-headers",
+						"id": "apache2-rewrite",
 						"name": "Rewrite Module",
 						"lines": [
 							"a2enmod rewrite",
