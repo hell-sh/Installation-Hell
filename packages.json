@@ -21,7 +21,7 @@
 				"id": "precmd",
 				"name": "Custom Pre-Installation Command",
 				"input": "Execute",
-				"lines": ["echo $PRECMD | bash"]
+				"lines": ["echo \"$PRECMD\" | bash"]
 			}
 		]
 	},
@@ -336,7 +336,7 @@
 				"id": "postcmd",
 				"name": "Custom Post-Installation Command",
 				"input": "Execute",
-				"lines": ["echo $POSTCMD | bash"]
+				"lines": ["echo \"$POSTCMD\" | bash"]
 			}
 		]
 	}
