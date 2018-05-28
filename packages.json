@@ -5,7 +5,7 @@
 			{
 				"id": "aptdate",
 				"name": "Update Package List",
-				"lines": ["apt-get update"]
+				"lines": ["apt-get -y update"]
 			},
 			{
 				"id": "aptgrade",
