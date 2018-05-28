@@ -5,7 +5,7 @@
 			{
 				"id": "aptdate",
 				"name": "Update Package List",
-				"lines": ["apt-get update"]
+				"lines": ["apt-get -y update"]
 			},
 			{
 				"id": "aptgrade",
@@ -21,7 +21,7 @@
 				"id": "precmd",
 				"name": "Custom Pre-Installation Command",
 				"input": "Execute",
-				"lines": ["$PRECMD | bash"]
+				"lines": ["echo $PRECMD | bash"]
 			}
 		]
 	},
@@ -336,7 +336,7 @@
 				"id": "postcmd",
 				"name": "Custom Post-Installation Command",
 				"input": "Execute",
-				"lines": ["$POSTCMD | bash"]
+				"lines": ["echo $POSTCMD | bash"]
 			}
 		]
 	}
