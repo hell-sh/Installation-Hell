@@ -75,6 +75,31 @@
 		]
 	},
 	{
+		"name": "Utilities",
+		"packages": [
+			{
+				"id": "git",
+				"name": "Git",
+				"lines": ["apt-get -y install git"]
+			},
+			{
+				"id": "htop",
+				"name": "htop",
+				"lines": ["apt-get -y install htop"]
+			},
+			{
+				"id": "nload",
+				"name": "nload",
+				"lines": ["apt-get -y install nload"]
+			},
+			{
+				"id": "un_zip",
+				"name": "zip + unzip",
+				"lines": ["apt-get -y install zip unzip"]
+			}
+		]
+	},
+	{
 		"name": "Programming Languages",
 		"packages": [
 			{
@@ -247,28 +272,8 @@
 		]
 	},
 	{
-		"name": "Utilities",
+		"name": "Image Tools",
 		"packages": [
-			{
-				"id": "git",
-				"name": "Git",
-				"lines": ["apt-get -y install git"]
-			},
-			{
-				"id": "htop",
-				"name": "htop",
-				"lines": ["apt-get -y install htop"]
-			},
-			{
-				"id": "nload",
-				"name": "nload",
-				"lines": ["apt-get -y install nload"]
-			},
-			{
-				"id": "un_zip",
-				"name": "zip + unzip",
-				"lines": ["apt-get -y install zip unzip"]
-			},
 			{
 				"id": "magick",
 				"name": "ImageMagick",
