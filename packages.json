@@ -220,7 +220,7 @@
 						"name": "HTTP-Error-Pages",
 						"lines": [
 							"cd /etc/apache2",
-							"wget https://github.com/netducks/HTTP-Error-Pages/archive/master.tar.gz",
+							"wget https://github.com/hell-sh/HTTP-Error-Pages/archive/master.tar.gz",
 							"tar -xvzf master.tar.gz",
 							"rm master.tar.gz",
 							"mv HTTP-Error-Pages-master http-error-pages",
