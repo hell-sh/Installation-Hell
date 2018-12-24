@@ -65,7 +65,7 @@
 			<?php
 		}
 		?>
-		<p>Is there anything missing? This list of packages is <a href="https://github.com/hell-sh/Installation-Hell" target="_blank">on Github</a>.</p>
+		<p>Copyright (c) 2017-2018, Hellsh &middot; <a href="https://hellsh.com/privacy">Privacy Policy</a> &middot; Installation Hell is <a href="https://github.com/hell-sh/Installation-Hell" target="_blank">open-source</a>.</p>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 		<script>
 			var packages=[];
