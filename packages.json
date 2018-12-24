@@ -96,6 +96,11 @@
 				"id": "un_zip",
 				"name": "zip + unzip",
 				"lines": ["apt-get -y install zip unzip"]
+			},
+			{
+				"id": "7z",
+				"name": "7zip",
+				"lines": ["apt-get -y install p7zip"]
 			}
 		]
 	},
