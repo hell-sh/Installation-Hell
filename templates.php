@@ -3,12 +3,16 @@
 <head>
 	<title>Installation Script Templates</title>
 	<meta name="title" content="Installation Script Templates">
+	<meta name="description" content="Some templates to get the software you need installed now.">
 	<meta name="copyright" content="Copyright (c) 2017-2018, Hellsh">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Installation Script Templates">
+	<meta name="twitter:author" content="@helldotsh">
+	<meta name="twitter:description" content="Some templates to get the software you need installed now.">
 	<meta property="og:site_name" content="Installation Hell">
 	<meta property="og:title" content="Installation Script Templates">
+	<meta property="og:description" content="Some templates to get the software you need installed now.">
 	<meta property="og:type" content="website">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
 	<style>.container{padding:60px 15px}</style>

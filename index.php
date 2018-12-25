@@ -3,12 +3,16 @@
 <head>
 	<title>Installation Hell</title>
 	<meta name="title" content="Installation Hell">
+	<meta name="description" content="Making the installation of things just a bit easier.">
 	<meta name="copyright" content="Copyright (c) 2017-2018, Hellsh">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Installation Hell">
+	<meta name="twitter:author" content="@helldotsh">
+	<meta name="twitter:description" content="Making the installation of things just a bit easier.">
 	<meta property="og:site_name" content="Installation Hell">
 	<meta property="og:title" content="Installation Hell">
+	<meta property="og:description" content="Making the installation of things just a bit easier.">
 	<meta property="og:type" content="website">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" crossorigin="anonymous">
 	<style>.container{padding:60px 15px}.no-list-style li{list-style:none}</style>
