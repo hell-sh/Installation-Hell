@@ -4,7 +4,7 @@
 	<title>Installation Hell</title>
 	<meta name="title" content="Installation Hell">
 	<meta name="description" content="Making the installation of things just a bit easier.">
-	<meta name="copyright" content="Copyright (c) 2017-2018, Hellsh">
+	<meta name="copyright" content="Copyright (c) 2017-19 Hell.sh">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Installation Hell">
@@ -69,7 +69,7 @@
 			<?php
 		}
 		?>
-		<p>Copyright (c) 2017-2018, Hellsh &middot; <a href="https://hellsh.com/privacy">Privacy Policy</a> &middot; Installation Hell is <a href="https://github.com/hell-sh/Installation-Hell" target="_blank">open-source</a>.</p>
+		<p>Copyright (c) 2017-19 <a href="https://hell.sh/" target="_blank">Hell.sh</a> &middot; <a href="https://hell.sh/privacy" target="_blank">Privacy Policy</a> &middot; Installation Hell is <a href="https://github.com/hell-sh/Installation-Hell" target="_blank">open-source</a>.</p>
 		<script src="https://cdn.hell.sh/jquery/latest/core.js" crossorigin="anonymous"></script>
 		<script src="index.js"></script>
 	</div>
