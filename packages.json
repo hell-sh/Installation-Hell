@@ -78,6 +78,16 @@
 		"name": "Utilities",
 		"packages": [
 			{
+				"id": "7z",
+				"name": "7zip",
+				"lines": ["apt-get -y install p7zip"]
+			},
+			{
+				"id": "curl",
+				"name": "cURL",
+				"lines": ["apt-get -y install curl"]
+			},
+			{
 				"id": "git",
 				"name": "Git",
 				"lines": ["apt-get -y install git"]
@@ -96,11 +106,6 @@
 				"id": "un_zip",
 				"name": "zip + unzip",
 				"lines": ["apt-get -y install zip unzip"]
-			},
-			{
-				"id": "7z",
-				"name": "7zip",
-				"lines": ["apt-get -y install p7zip"]
 			}
 		]
 	},
@@ -136,18 +141,19 @@
 						]
 					},
 					{
-						"id": "php-fpm",
-						"name": "PHP FPM",
-						"lines": ["apt-get -y install php-fpm"]
-					},
-					{
 						"id": "php-curl",
-						"name": "PHP CURL",
+						"name": "cURL",
+						"requirement": "curl",
 						"lines": ["apt-get -y install php-curl"]
 					},
 					{
+						"id": "php-fpm",
+						"name": "FPM",
+						"lines": ["apt-get -y install php-fpm"]
+					},
+					{
 						"id": "php-mysql",
-						"name": "PHP MySQL Extension",
+						"name": "MySQL",
 						"lines": ["apt-get -y install php-mysql"],
 						"children": [
 							{
