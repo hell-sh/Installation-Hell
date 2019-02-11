@@ -115,7 +115,25 @@
 					{
 						"id": "php-cli",
 						"name": "CLI",
-						"lines": ["apt-get -y install php-cli"]
+						"lines": ["apt-get -y install php-cli"],
+						"children": [
+							{
+								"id": "composer",
+								"name": "Composer",
+								"lines": [
+									"wget -qO- https://getcomposer.org/installer | php",
+									"mv composer.phar /usr/local/bin/composer"
+								]
+							},
+							{
+								"id": "phpunit",
+								"name": "PHPUnit",
+								"lines": [
+									"wget -O /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-8.phar",
+									"chmod +x /usr/local/bin/phpunit"
+								]
+							}
+						]
 					},
 					{
 						"id": "php-fpm",
