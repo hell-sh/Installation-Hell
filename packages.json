@@ -125,18 +125,12 @@
 							{
 								"id": "composer",
 								"name": "Composer",
-								"lines": [
-									"wget -qO- https://getcomposer.org/installer | php",
-									"mv composer.phar /usr/local/bin/composer"
-								]
+								"lines": ["apt-get -y install composer"]
 							},
 							{
 								"id": "phpunit",
 								"name": "PHPUnit",
-								"lines": [
-									"wget -O /usr/local/bin/phpunit https://phar.phpunit.de/phpunit-8.phar",
-									"chmod +x /usr/local/bin/phpunit"
-								]
+								"lines": ["apt-get -y install phpunit"]
 							}
 						]
 					},
